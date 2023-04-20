@@ -22,7 +22,7 @@
  * manual definition is more clear.
  */
 #ifdef SDL_DYNLOAD
-#include "common/SDL2.hpp"
+#include "SDL2.hpp"
 
 namespace ale {
 

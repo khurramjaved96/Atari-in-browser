@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/ElevatorAction.hpp"
+#include "ElevatorAction.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

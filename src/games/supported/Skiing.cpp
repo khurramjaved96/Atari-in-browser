@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Skiing.hpp"
+#include "Skiing.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

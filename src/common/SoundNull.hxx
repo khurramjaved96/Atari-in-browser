@@ -29,7 +29,7 @@ class Deserializer;
 }  // namespace stella
 }  // namespace ale
 
-#include "emucore/Sound.hxx"
+#include "../emucore/Sound.hxx"
 
 namespace ale {
 

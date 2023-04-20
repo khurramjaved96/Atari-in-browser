@@ -16,7 +16,7 @@
 // $Id: M6502.cxx,v 1.21 2007/01/01 18:04:50 stephena Exp $
 //============================================================================
 
-#include "emucore/M6502.hxx"
+#include "M6502.hxx"
 
 #include <mutex>
 #include <cstdint>

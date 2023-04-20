@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/MarioBros.hpp"
+#include "MarioBros.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

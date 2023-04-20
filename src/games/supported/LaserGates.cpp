@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/LaserGates.hpp"
+#include "LaserGates.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

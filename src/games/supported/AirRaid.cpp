@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/AirRaid.hpp"
+#include "AirRaid.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

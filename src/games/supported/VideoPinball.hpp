@@ -28,7 +28,7 @@
 #ifndef __VIDEOPINBALL_HPP__
 #define __VIDEOPINBALL_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

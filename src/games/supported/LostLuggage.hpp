@@ -13,7 +13,7 @@
 #ifndef __LOSTLUGGAGE_HPP__
 #define __LOSTLUGGAGE_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

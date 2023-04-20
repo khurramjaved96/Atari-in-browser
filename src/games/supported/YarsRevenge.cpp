@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/YarsRevenge.hpp"
+#include "YarsRevenge.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

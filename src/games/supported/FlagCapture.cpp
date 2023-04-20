@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/FlagCapture.hpp"
+#include "FlagCapture.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

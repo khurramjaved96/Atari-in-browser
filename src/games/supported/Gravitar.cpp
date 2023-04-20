@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Gravitar.hpp"
+#include "Gravitar.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

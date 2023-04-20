@@ -24,7 +24,7 @@
 // define some macros to shim the SDL functions
 // we use in the ALE.
 #ifdef SDL_DYNLOAD
-  #include "common/DynamicLoad.hpp"
+  #include "DynamicLoad.hpp"
 
   // Try the default dynamic library name per platform
   // if SDL2_LIBRARY_NAME is not defined.

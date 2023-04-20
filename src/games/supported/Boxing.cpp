@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Boxing.hpp"
+#include "Boxing.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

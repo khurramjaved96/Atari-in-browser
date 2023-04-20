@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Othello.hpp"
+#include "Othello.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -23,8 +23,8 @@
 #include <algorithm>
 #include <string>
 
-#include "emucore/OSystem.hxx"
-#include "emucore/Settings.hxx"
+#include "OSystem.hxx"
+#include "Settings.hxx"
 
 namespace ale {
 namespace stella {

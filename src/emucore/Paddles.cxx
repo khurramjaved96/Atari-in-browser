@@ -16,8 +16,8 @@
 // $Id: Paddles.cxx,v 1.8 2007/01/05 17:54:23 stephena Exp $
 //============================================================================
 
-#include "emucore/Event.hxx"
-#include "emucore/Paddles.hxx"
+#include "Event.hxx"
+#include "Paddles.hxx"
 
 namespace ale {
 namespace stella {

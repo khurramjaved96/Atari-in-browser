@@ -17,7 +17,7 @@
 //============================================================================
 
 #include <cassert>
-#include "emucore/MediaSrc.hxx"
+#include "MediaSrc.hxx"
 
 namespace ale {
 namespace stella {

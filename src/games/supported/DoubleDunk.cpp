@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/DoubleDunk.hpp"
+#include "DoubleDunk.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

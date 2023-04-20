@@ -13,7 +13,7 @@
 #ifndef __LASERGATES_HPP__
 #define __LASERGATES_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

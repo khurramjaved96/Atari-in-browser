@@ -29,7 +29,7 @@ class Deserializer;
 }  // namespace stella
 }  // namespace ale
 
-#include "emucore/M6502.hxx"
+#include "M6502.hxx"
 
 namespace ale {
 namespace stella {

@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/BankHeist.hpp"
+#include "BankHeist.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

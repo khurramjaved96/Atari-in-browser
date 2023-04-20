@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Superman.hpp"
+#include "Superman.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

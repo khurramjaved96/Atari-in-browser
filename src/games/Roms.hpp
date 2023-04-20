@@ -16,7 +16,7 @@
 #include <filesystem>
 #include <string>
 
-#include "games/RomSettings.hpp"
+#include "RomSettings.hpp"
 
 namespace fs = std::filesystem;
 

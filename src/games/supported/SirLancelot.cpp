@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/SirLancelot.hpp"
+#include "SirLancelot.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Turmoil.hpp"
+#include "Turmoil.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

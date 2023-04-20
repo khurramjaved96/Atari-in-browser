@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/KeystoneKapers.hpp"
+#include "KeystoneKapers.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

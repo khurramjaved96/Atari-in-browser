@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/BasicMath.hpp"
+#include "BasicMath.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

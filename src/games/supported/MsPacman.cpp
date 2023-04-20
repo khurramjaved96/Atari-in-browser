@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/MsPacman.hpp"
+#include "MsPacman.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/WizardOfWor.hpp"
+#include "WizardOfWor.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

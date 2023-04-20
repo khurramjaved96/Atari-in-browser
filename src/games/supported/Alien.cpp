@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Alien.hpp"
+#include "Alien.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

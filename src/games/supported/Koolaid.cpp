@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Koolaid.hpp"
+#include "Koolaid.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

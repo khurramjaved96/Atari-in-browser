@@ -14,7 +14,7 @@
  *
  **************************************************************************** */
 
-#include "common/ScreenExporter.hpp"
+#include "ScreenExporter.hpp"
 
 #include <zlib.h>
 #include <cassert>
@@ -24,7 +24,7 @@
 #include <vector>
 #include <iomanip>
 
-#include "common/Log.hpp"
+#include "Log.hpp"
 
 namespace ale {
 

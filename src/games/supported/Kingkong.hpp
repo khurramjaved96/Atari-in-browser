@@ -28,7 +28,7 @@
 #ifndef __KINGKONG_HPP__
 #define __KINGKONG_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

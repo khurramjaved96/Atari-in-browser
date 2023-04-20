@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/NameThisGame.hpp"
+#include "NameThisGame.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

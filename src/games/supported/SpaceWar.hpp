@@ -26,7 +26,7 @@
 #ifndef __SPACE_WAR_HPP__
 #define __SPACE_WAR_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

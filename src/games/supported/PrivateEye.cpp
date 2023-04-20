@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/PrivateEye.hpp"
+#include "PrivateEye.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

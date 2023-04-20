@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Blackjack.hpp"
+#include "Blackjack.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

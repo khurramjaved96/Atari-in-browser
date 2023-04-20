@@ -19,13 +19,13 @@
 #include <cassert>
 #include <iostream>
 
-#include "emucore/Device.hxx"
-#include "emucore/M6502.hxx"
-#include "emucore/TIA.hxx"
-#include "emucore/System.hxx"
-#include "emucore/Serializer.hxx"
-#include "emucore/Deserializer.hxx"
-#include "emucore/Settings.hxx"
+#include "Device.hxx"
+#include "M6502.hxx"
+#include "TIA.hxx"
+#include "System.hxx"
+#include "Serializer.hxx"
+#include "Deserializer.hxx"
+#include "Settings.hxx"
 
 namespace ale {
 namespace stella {

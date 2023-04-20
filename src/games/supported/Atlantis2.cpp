@@ -28,9 +28,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Atlantis2.hpp"
+#include "Atlantis2.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

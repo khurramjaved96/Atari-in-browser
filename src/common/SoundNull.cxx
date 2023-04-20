@@ -16,12 +16,12 @@
 // $Id: SoundNull.cxx,v 1.6 2007/01/01 18:04:40 stephena Exp $
 //============================================================================
 
-#include "emucore/Serializer.hxx"
-#include "emucore/Deserializer.hxx"
+#include "../emucore/Serializer.hxx"
+#include "../emucore/Deserializer.hxx"
 
 
-#include "emucore/Settings.hxx"
-#include "common/SoundNull.hxx"
+#include "../emucore/Settings.hxx"
+#include "SoundNull.hxx"
 
 namespace ale {
 using namespace stella;   // Settings, Serializer, Deserializer

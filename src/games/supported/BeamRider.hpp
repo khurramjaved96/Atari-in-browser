@@ -28,7 +28,7 @@
 #ifndef __BEAMRIDER_HPP__
 #define __BEAMRIDER_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

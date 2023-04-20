@@ -17,7 +17,7 @@
 //============================================================================
 
 #include <cassert>
-#include "emucore/Control.hxx"
+#include "Control.hxx"
 
 namespace ale {
 namespace stella {

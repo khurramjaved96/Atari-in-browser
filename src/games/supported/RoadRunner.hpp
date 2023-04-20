@@ -28,7 +28,7 @@
 #ifndef __ROADRUNNER_HPP__
 #define __ROADRUNNER_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

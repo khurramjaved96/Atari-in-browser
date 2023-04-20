@@ -26,7 +26,7 @@
 #ifndef __BLACKJACK_HPP__
 #define __BLACKJACK_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

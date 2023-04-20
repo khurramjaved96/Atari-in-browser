@@ -33,10 +33,10 @@ class System;
 }  // namespace stella
 }  // namespace ale
 
-#include "emucore/Control.hxx"
-#include "emucore/Props.hxx"
-#include "emucore/TIA.hxx"
-#include "emucore/Cart.hxx"
+#include "Control.hxx"
+#include "Props.hxx"
+#include "TIA.hxx"
+#include "Cart.hxx"
 
 namespace ale {
 namespace stella {

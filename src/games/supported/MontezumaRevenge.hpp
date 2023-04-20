@@ -28,7 +28,7 @@
 #ifndef __MONTEZUMAREVENGE_HPP__
 #define __MONTEZUMAREVENGE_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Frogger.hpp"
+#include "Frogger.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

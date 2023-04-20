@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/MontezumaRevenge.hpp"
+#include "MontezumaRevenge.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

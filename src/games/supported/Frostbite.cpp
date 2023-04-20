@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Frostbite.hpp"
+#include "Frostbite.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

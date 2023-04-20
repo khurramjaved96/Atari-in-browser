@@ -26,7 +26,7 @@
 #ifndef __HANGMAN_HPP__
 #define __HANGMAN_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

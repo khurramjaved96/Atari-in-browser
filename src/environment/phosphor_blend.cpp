@@ -14,9 +14,9 @@
  *
  **************************************************************************** */
 
-#include "environment/phosphor_blend.hpp"
+#include "phosphor_blend.hpp"
 
-#include "emucore/Console.hxx"
+#include "../emucore/Console.hxx"
 
 namespace ale {
 using namespace stella;   // OSystem

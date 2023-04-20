@@ -10,11 +10,11 @@
  * *****************************************************************************
  */
 
-#include "games/supported/FishingDerby.hpp"
+#include "FishingDerby.hpp"
 
 #include <algorithm>
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

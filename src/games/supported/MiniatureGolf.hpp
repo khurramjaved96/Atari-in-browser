@@ -26,7 +26,7 @@
 #ifndef __MINIATURE_GOLF_HPP__
 #define __MINIATURE_GOLF_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

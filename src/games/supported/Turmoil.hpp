@@ -13,7 +13,7 @@
 #ifndef __TURMOIL_HPP__
 #define __TURMOIL_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

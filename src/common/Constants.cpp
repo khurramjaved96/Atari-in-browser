@@ -13,7 +13,7 @@
  *
  **************************************************************************** */
 
-#include "common/Constants.h"
+#include "Constants.h"
 
 #include <cassert>
 #include <string>

@@ -13,7 +13,7 @@
 #ifndef __AIRRAID_HPP__
 #define __AIRRAID_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

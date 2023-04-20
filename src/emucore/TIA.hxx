@@ -31,9 +31,9 @@ class Settings;
 }  // namespace stella
 }  // namespace ale
 
-#include "emucore/Sound.hxx"
-#include "emucore/Device.hxx"
-#include "emucore/MediaSrc.hxx"
+#include "Sound.hxx"
+#include "Device.hxx"
+#include "MediaSrc.hxx"
 
 namespace ale {
 namespace stella {

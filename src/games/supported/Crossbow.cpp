@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Crossbow.hpp"
+#include "Crossbow.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

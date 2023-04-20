@@ -17,8 +17,8 @@
 //============================================================================
 
 #include <cassert>
-#include "emucore/Event.hxx"
-#include "emucore/Joystick.hxx"
+#include "Event.hxx"
+#include "Joystick.hxx"
 
 namespace ale {
 namespace stella {

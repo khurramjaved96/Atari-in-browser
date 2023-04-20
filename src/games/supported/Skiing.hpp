@@ -28,7 +28,7 @@
 #ifndef __SKIING_HPP__
 #define __SKIING_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

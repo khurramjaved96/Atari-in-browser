@@ -1,4 +1,4 @@
-#include "common/Log.hpp"
+#include "Log.hpp"
 
 #include <iostream>
 

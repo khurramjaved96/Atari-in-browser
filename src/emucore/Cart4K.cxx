@@ -18,10 +18,10 @@
 
 #include <cassert>
 
-#include "emucore/System.hxx"
-#include "emucore/Serializer.hxx"
-#include "emucore/Deserializer.hxx"
-#include "emucore/Cart4K.hxx"
+#include "System.hxx"
+#include "Serializer.hxx"
+#include "Deserializer.hxx"
+#include "Cart4K.hxx"
 
 namespace ale {
 namespace stella {

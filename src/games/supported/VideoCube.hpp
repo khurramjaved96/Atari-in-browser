@@ -26,7 +26,7 @@
 #ifndef __VIDEO_CUBE_HPP__
 #define __VIDEO_CUBE_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

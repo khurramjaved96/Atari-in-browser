@@ -12,7 +12,7 @@
  *
  *  Helper functions to manage dynamic loading libraries.
  **************************************************************************** */
-#include "common/DynamicLoad.hpp"
+#include "DynamicLoad.hpp"
 
 #if defined(WIN32)
   #include <windows.h>

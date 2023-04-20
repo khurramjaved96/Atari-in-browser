@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Centipede.hpp"
+#include "Centipede.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

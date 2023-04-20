@@ -1,6 +1,6 @@
-#include "environment/stella_environment_wrapper.hpp"
+#include "stella_environment_wrapper.hpp"
 
-#include "environment/stella_environment.hpp"
+#include "stella_environment.hpp"
 
 namespace ale {
 using namespace stella;   // Random

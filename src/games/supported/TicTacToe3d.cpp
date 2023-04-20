@@ -23,8 +23,8 @@
  * *****************************************************************************
  */
 
-#include "games/supported/TicTacToe3d.hpp"
-#include "games/RomUtils.hpp"
+#include "TicTacToe3d.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -31,8 +31,8 @@ class Settings;
 }  // namespace ale
 
 #include <fstream>
-#include "emucore/Device.hxx"
-#include "common/Log.hpp"
+#include "Device.hxx"
+#include "../common/Log.hpp"
 
 namespace ale {
 namespace stella {

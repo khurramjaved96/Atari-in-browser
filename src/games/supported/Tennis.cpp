@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Tennis.hpp"
+#include "Tennis.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

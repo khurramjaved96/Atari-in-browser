@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/ChopperCommand.hpp"
+#include "ChopperCommand.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

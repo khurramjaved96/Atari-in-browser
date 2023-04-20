@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/UpNDown.hpp"
+#include "UpNDown.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

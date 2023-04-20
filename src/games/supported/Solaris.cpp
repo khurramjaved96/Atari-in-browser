@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Solaris.hpp"
+#include "Solaris.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

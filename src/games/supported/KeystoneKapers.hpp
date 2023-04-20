@@ -13,7 +13,7 @@
 #ifndef __KEYSTONEKAPERS_HPP__
 #define __KEYSTONEKAPERS_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

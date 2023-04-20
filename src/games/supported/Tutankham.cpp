@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Tutankham.hpp"
+#include "Tutankham.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

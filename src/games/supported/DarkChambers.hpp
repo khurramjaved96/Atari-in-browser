@@ -26,7 +26,7 @@
 #ifndef __DARK_CHAMBERS_HPP__
 #define __DARK_CHAMBERS_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

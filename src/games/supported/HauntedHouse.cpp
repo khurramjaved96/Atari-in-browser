@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/HauntedHouse.hpp"
+#include "HauntedHouse.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

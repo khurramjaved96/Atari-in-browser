@@ -15,9 +15,9 @@
  * *****************************************************************************
  */
 
-#include "games/RomUtils.hpp"
+#include "RomUtils.hpp"
 
-#include "emucore/System.hxx"
+#include "../emucore/System.hxx"
 
 namespace ale {
 using namespace stella;   // System

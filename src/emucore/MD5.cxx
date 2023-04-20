@@ -19,7 +19,7 @@
 // $Id: MD5.cxx,v 1.7 2007/01/01 18:04:48 stephena Exp $
 //============================================================================
 
-#include "emucore/MD5.hxx"
+#include "MD5.hxx"
 
 /*
  Copyright (C) 1991-2, RSA Data Security, Inc. Created 1991. All

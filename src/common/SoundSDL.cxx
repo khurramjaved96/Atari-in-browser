@@ -22,16 +22,16 @@
 #include <cassert>
 #include <cmath>
 
-#include "emucore/TIASnd.hxx"
+#include "TIASnd.hxx"
 // #include "FrameBuffer.hxx"
-#include "emucore/Serializer.hxx"
-#include "emucore/Deserializer.hxx"
-#include "emucore/Settings.hxx"
-#include "emucore/System.hxx"
+#include "Serializer.hxx"
+#include "Deserializer.hxx"
+#include "Settings.hxx"
+#include "System.hxx"
 
-#include "common/SDL2.hpp"
-#include "common/SoundSDL.hxx"
-#include "common/Log.hpp"
+#include "SDL2.hpp"
+#include "SoundSDL.hxx"
+#include "Log.hpp"
 
 namespace ale {
 using namespace stella;   // Settings, Serializer, Deserializer

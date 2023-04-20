@@ -23,10 +23,10 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Klax.hpp"
+#include "Klax.hpp"
 
-#include "games/RomUtils.hpp"
-#include "common/Constants.h"
+#include "../RomUtils.hpp"
+#include "../../common/Constants.h"
 
 namespace ale {
 using namespace stella;

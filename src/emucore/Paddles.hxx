@@ -19,8 +19,8 @@
 #ifndef PADDLES_HXX
 #define PADDLES_HXX
 
-#include "emucore/Control.hxx"
-#include "emucore/Event.hxx"
+#include "Control.hxx"
+#include "Event.hxx"
 
 namespace ale {
 namespace stella {

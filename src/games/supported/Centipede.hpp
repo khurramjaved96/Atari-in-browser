@@ -28,7 +28,7 @@
 #ifndef __CENTIPEDE_HPP__
 #define __CENTIPEDE_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

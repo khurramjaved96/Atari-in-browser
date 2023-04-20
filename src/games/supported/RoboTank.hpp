@@ -28,7 +28,7 @@
 #ifndef __ROBOTANK_HPP__
 #define __ROBOTANK_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

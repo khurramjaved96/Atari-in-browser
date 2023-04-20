@@ -26,9 +26,9 @@
  *
  * *****************************************************************************
  */
-#include "games/supported/Surround.hpp"
+#include "Surround.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

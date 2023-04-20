@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Berzerk.hpp"
+#include "Berzerk.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

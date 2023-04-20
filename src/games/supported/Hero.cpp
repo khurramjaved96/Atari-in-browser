@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Hero.hpp"
+#include "Hero.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

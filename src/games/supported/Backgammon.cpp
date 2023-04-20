@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Backgammon.hpp"
+#include "Backgammon.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

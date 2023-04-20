@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Pitfall.hpp"
+#include "Pitfall.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

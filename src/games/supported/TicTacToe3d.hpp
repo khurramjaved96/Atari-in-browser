@@ -26,7 +26,7 @@
 #ifndef __TIC_TAC_TOE_3D_HPP__
 #define __TIC_TAC_TOE_3D_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

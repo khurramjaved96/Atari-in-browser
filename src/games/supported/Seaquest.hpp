@@ -28,7 +28,7 @@
 #ifndef __SEAQUEST_HPP__
 #define __SEAQUEST_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

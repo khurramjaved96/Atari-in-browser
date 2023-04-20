@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/HumanCannonball.hpp"
+#include "HumanCannonball.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

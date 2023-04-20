@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/QBert.hpp"
+#include "QBert.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

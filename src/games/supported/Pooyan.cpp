@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Pooyan.hpp"
+#include "Pooyan.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

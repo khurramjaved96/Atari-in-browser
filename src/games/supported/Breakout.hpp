@@ -28,7 +28,7 @@
 #ifndef __BREAKOUT_HPP__
 #define __BREAKOUT_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

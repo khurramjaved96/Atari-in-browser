@@ -28,7 +28,7 @@
 #ifndef __ZAXXON_HPP__
 #define __ZAXXON_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

@@ -28,7 +28,7 @@
 #ifndef __BOXING_HPP__
 #define __BOXING_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

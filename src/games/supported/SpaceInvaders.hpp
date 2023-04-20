@@ -28,7 +28,7 @@
 #ifndef __SPACEINVADERS_HPP__
 #define __SPACEINVADERS_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/TimePilot.hpp"
+#include "TimePilot.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

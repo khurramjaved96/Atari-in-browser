@@ -33,9 +33,9 @@ class Settings;
 }  // namespace stella
 }  // namespace ale
 
-#include "emucore/Device.hxx"
-#include "emucore/NullDev.hxx"
-#include "emucore/Random.hxx"
+#include "Device.hxx"
+#include "NullDev.hxx"
+#include "Random.hxx"
 
 #include <string>
 

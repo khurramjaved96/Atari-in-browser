@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/RoboTank.hpp"
+#include "RoboTank.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

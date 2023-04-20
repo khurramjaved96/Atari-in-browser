@@ -33,7 +33,7 @@
 #ifndef _PACMAN_HPP__
 #define _PACMAN_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

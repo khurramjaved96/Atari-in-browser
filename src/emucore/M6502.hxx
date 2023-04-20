@@ -29,7 +29,7 @@ class Deserializer;
 }  // namespace stella
 }  // namespace ale
 
-#include "emucore/System.hxx"
+#include "System.hxx"
 #include <cstdint>
 
 namespace ale {

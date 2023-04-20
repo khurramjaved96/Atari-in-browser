@@ -28,7 +28,7 @@
 #ifndef __BATTLEZONE_HPP__
 #define __BATTLEZONE_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

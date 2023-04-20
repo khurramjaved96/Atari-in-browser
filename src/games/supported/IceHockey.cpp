@@ -10,11 +10,11 @@
  * *****************************************************************************
  */
 
-#include "games/supported/IceHockey.hpp"
+#include "IceHockey.hpp"
 
 #include <algorithm>
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

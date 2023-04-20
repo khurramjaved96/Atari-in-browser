@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/KungFuMaster.hpp"
+#include "KungFuMaster.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

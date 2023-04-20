@@ -19,6 +19,8 @@
 #ifndef SOUND_HXX
 #define SOUND_HXX
 
+#include <stdint.h>
+
 namespace ale {
 namespace stella {
 

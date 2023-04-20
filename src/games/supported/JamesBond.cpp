@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/JamesBond.hpp"
+#include "JamesBond.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

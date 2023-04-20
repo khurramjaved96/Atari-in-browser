@@ -15,14 +15,14 @@
  *
  **************************************************************************** */
 
-#include "environment/stella_environment.hpp"
+#include "stella_environment.hpp"
 
 #include <algorithm>
 #include <sstream>
 #include <cstring>
 #include <optional>
 
-#include "emucore/System.hxx"
+#include "../emucore/System.hxx"
 
 namespace ale {
 using namespace stella;   // OSystem, Random

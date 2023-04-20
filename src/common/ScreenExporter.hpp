@@ -19,9 +19,9 @@
 
 #include <string>
 
-#include "common/Constants.h"
-#include "common/ColourPalette.hpp"
-#include "environment/ale_screen.hpp"
+#include "Constants.h"
+#include "ColourPalette.hpp"
+#include "../environment/ale_screen.hpp"
 
 namespace ale {
 

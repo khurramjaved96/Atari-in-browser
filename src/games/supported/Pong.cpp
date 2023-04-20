@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Pong.hpp"
+#include "Pong.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

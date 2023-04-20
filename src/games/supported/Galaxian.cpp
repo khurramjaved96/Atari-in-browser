@@ -24,9 +24,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Galaxian.hpp"
+#include "Galaxian.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

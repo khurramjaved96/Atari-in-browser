@@ -21,11 +21,11 @@
 #include <string>
 #include <optional>
 
-#include "common/Constants.h"
-#include "emucore/OSystem.hxx"
-#include "emucore/Event.hxx"
-#include "emucore/Random.hxx"
-#include "common/Log.hpp"
+#include "../common/Constants.h"
+#include "../emucore/OSystem.hxx"
+#include "../emucore/Event.hxx"
+#include "../emucore/Random.hxx"
+#include "../common/Log.hpp"
 
 namespace ale {
 

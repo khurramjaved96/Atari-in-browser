@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/LostLuggage.hpp"
+#include "LostLuggage.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

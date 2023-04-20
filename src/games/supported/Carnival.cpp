@@ -10,9 +10,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Carnival.hpp"
+#include "Carnival.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

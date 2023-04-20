@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Asteroids.hpp"
+#include "Asteroids.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

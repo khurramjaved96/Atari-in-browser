@@ -10,11 +10,11 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Enduro.hpp"
+#include "Enduro.hpp"
 
 #include <cassert>
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

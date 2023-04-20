@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Krull.hpp"
+#include "Krull.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

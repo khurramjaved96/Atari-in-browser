@@ -28,8 +28,8 @@
 #ifndef __FREEWAY_HPP__
 #define __FREEWAY_HPP__
 
-#include "environment/stella_environment_wrapper.hpp"
-#include "games/RomSettings.hpp"
+#include "../../environment/stella_environment_wrapper.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

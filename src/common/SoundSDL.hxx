@@ -29,13 +29,13 @@ class Settings;
 }  // namespace stella
 }  // namespace ale
 
-#include "emucore/Sound.hxx"
-#include "emucore/MediaSrc.hxx"
-#include "emucore/TIASnd.hxx"
+#include "Sound.hxx"
+#include "MediaSrc.hxx"
+#include "TIASnd.hxx"
 
-#include "common/SDL2.hpp"
+#include "SDL2.hpp"
 // If desired, we save sound to disk
-#include "common/SoundExporter.hpp"
+#include "SoundExporter.hpp"
 #include <memory>
 
 namespace ale {

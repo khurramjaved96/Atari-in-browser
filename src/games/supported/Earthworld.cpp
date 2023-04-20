@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Earthworld.hpp"
+#include "Earthworld.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -16,7 +16,7 @@
  * *****************************************************************************
  */
 
-#include "games/RomSettings.hpp"
+#include "RomSettings.hpp"
 
 #include <algorithm>
 

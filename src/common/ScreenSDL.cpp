@@ -14,10 +14,10 @@
  *  Supports displaying the screen via SDL.
  **************************************************************************** */
 #ifdef SDL_SUPPORT
-#include "common/SDL2.hpp"
+#include "SDL2.hpp"
 
-#include "common/ScreenSDL.hpp"
-#include "common/Log.hpp"
+#include "ScreenSDL.hpp"
+#include "Log.hpp"
 
 #include <cmath>
 

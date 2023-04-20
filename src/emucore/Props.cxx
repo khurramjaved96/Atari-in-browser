@@ -22,7 +22,7 @@
 #include <string>
 #include <iostream>
 
-#include "emucore/Props.hxx"
+#include "Props.hxx"
 
 namespace ale {
 namespace stella {

@@ -12,9 +12,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/JourneyEscape.hpp"
+#include "JourneyEscape.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

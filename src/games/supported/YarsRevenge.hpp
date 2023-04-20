@@ -28,7 +28,7 @@
 #ifndef __YARS_REVENGE_HPP__
 #define __YARS_REVENGE_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

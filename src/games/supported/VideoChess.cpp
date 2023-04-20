@@ -30,9 +30,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/VideoChess.hpp"
+#include "VideoChess.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -16,7 +16,7 @@
 // $Id: Device.cxx,v 1.4 2007/01/01 18:04:50 stephena Exp $
 //============================================================================
 
-#include "emucore/Device.hxx"
+#include "Device.hxx"
 
 namespace ale {
 namespace stella {

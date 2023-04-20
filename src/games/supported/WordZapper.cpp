@@ -22,9 +22,9 @@
  *
  * *****************************************************************************
  */
-#include "games/supported/WordZapper.hpp"
+#include "WordZapper.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -23,12 +23,12 @@
  * *****************************************************************************
  */
 
-#include "games/supported/VideoCube.hpp"
+#include "VideoCube.hpp"
 
 #include <cmath>
 #include <stdexcept>
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -19,10 +19,10 @@
 #include <cassert>
 #include <cstring>
 
-#include "emucore/System.hxx"
-#include "emucore/Serializer.hxx"
-#include "emucore/Deserializer.hxx"
-#include "emucore/CartCV.hxx"
+#include "System.hxx"
+#include "Serializer.hxx"
+#include "Deserializer.hxx"
+#include "CartCV.hxx"
 
 namespace ale {
 namespace stella {

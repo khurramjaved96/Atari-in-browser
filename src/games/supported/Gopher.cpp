@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Gopher.hpp"
+#include "Gopher.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -29,14 +29,15 @@ class PropertiesSet;
 
 #include <filesystem>
 
-#include "emucore/Sound.hxx"
-#include "emucore/Screen.hxx"
-#include "common/SoundNull.hxx"
-#include "emucore/Settings.hxx"
-#include "emucore/Console.hxx"
-#include "emucore/Event.hxx"  //ALE
-#include "common/ColourPalette.hpp"
-#include "common/Log.hpp"
+#include "Sound.hxx"
+#include "Screen.hxx"
+#include "../common/SoundNull.hxx"
+#include "Settings.hxx"
+#include "Console.hxx"
+#include "Event.hxx"  //ALE
+#include "../common/ColourPalette.hpp"
+#include "../common/Log.hpp"
+#include <fstream>
 
 namespace fs = std::filesystem;
 

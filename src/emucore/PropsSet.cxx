@@ -21,9 +21,9 @@
 #include <cstring>
 #include <iostream>
 
-#include "emucore/DefProps.hxx"
-#include "emucore/Props.hxx"
-#include "emucore/PropsSet.hxx"
+#include "DefProps.hxx"
+#include "Props.hxx"
+#include "PropsSet.hxx"
 
 namespace ale {
 namespace stella {

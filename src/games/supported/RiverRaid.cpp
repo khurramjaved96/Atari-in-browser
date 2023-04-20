@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/RiverRaid.hpp"
+#include "RiverRaid.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

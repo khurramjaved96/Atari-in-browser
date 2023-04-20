@@ -28,7 +28,7 @@
 #ifndef __PITFALL_HPP__
 #define __PITFALL_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

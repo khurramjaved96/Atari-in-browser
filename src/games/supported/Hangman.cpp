@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Hangman.hpp"
+#include "Hangman.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

@@ -30,7 +30,7 @@
 #ifndef __SURROUND_HPP__
 #define __SURROUND_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

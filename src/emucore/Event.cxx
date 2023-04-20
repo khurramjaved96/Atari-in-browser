@@ -16,7 +16,7 @@
 // $Id: Event.cxx,v 1.11 2007/01/01 18:04:47 stephena Exp $
 //============================================================================
 
-#include "emucore/Event.hxx"
+#include "Event.hxx"
 
 namespace ale {
 namespace stella {

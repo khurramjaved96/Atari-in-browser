@@ -1,4 +1,4 @@
-#include "common/SoundExporter.hpp"
+#include "SoundExporter.hpp"
 
 #include <cassert>
 

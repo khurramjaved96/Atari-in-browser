@@ -28,7 +28,7 @@
 #ifndef __SOLARIS_HPP__
 #define __SOLARIS_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

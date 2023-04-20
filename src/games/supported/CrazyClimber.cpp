@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/CrazyClimber.hpp"
+#include "CrazyClimber.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

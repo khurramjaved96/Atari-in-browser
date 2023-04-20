@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/SpaceInvaders.hpp"
+#include "SpaceInvaders.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

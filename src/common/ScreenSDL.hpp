@@ -19,12 +19,12 @@
 
 #ifdef SDL_SUPPORT
 
-#include "common/Constants.h"
-#include "common/ColourPalette.hpp"
-#include "emucore/Screen.hxx"
-#include "emucore/OSystem.hxx"
-#include "emucore/MediaSrc.hxx"
-#include "common/SDL2.hpp"
+#include "Constants.h"
+#include "ColourPalette.hpp"
+#include "Screen.hxx"
+#include "OSystem.hxx"
+#include "MediaSrc.hxx"
+#include "SDL2.hpp"
 
 namespace ale {
 

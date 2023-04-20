@@ -13,7 +13,7 @@
 #ifndef __MRDO_HPP__
 #define __MRDO_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

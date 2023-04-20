@@ -23,10 +23,10 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Casino.hpp"
+#include "Casino.hpp"
 
-#include "games/RomUtils.hpp"
-#include "common/Constants.h"
+#include "../RomUtils.hpp"
+#include "../../common/Constants.h"
 
 namespace ale {
 using namespace stella;

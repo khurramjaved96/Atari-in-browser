@@ -24,16 +24,16 @@
 #include <string>
 #include <zlib.h>
 
-#include "emucore/MD5.hxx"
-#include "emucore/Settings.hxx"
-#include "emucore/PropsSet.hxx"
-#include "emucore/Event.hxx"
-#include "emucore/OSystem.hxx"
-#include "emucore/System.hxx"
+#include "MD5.hxx"
+#include "Settings.hxx"
+#include "PropsSet.hxx"
+#include "Event.hxx"
+#include "OSystem.hxx"
+#include "System.hxx"
 
 #ifdef SDL_SUPPORT
-  #include "common/ScreenSDL.hpp"
-  #include "common/SoundSDL.hxx"
+  #include "../common/ScreenSDL.hpp"
+  #include "../common/SoundSDL.hxx"
 #endif
 
 #define MAX_ROM_SIZE  512 * 1024

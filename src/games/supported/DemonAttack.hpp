@@ -28,7 +28,7 @@
 #ifndef __DEMONATTACK_HPP__
 #define __DEMONATTACK_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

@@ -28,7 +28,7 @@
 #ifndef __BERZERK_HPP__
 #define __BERZERK_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

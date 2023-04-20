@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/DarkChambers.hpp"
+#include "DarkChambers.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

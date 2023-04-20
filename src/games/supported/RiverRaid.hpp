@@ -30,7 +30,7 @@
 
 #include <map>
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

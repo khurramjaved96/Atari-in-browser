@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Kingkong.hpp"
+#include "Kingkong.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

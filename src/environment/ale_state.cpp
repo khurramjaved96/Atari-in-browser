@@ -10,20 +10,20 @@
  * *****************************************************************************
  */
 
-#include "environment/ale_state.hpp"
+#include "ale_state.hpp"
 
 #include <cassert>
 #include <sstream>
 #include <stdexcept>
 #include <string>
 
-#include "emucore/System.hxx"
-#include "emucore/Event.hxx"
-#include "emucore/Deserializer.hxx"
-#include "emucore/Serializer.hxx"
-#include "emucore/Random.hxx"
-#include "common/Constants.h"
-#include "games/RomSettings.hpp"
+#include "../emucore/System.hxx"
+#include "../emucore/Event.hxx"
+#include "../emucore/Deserializer.hxx"
+#include "../emucore/Serializer.hxx"
+#include "../emucore/Random.hxx"
+#include "../common/Constants.h"
+#include "../games/RomSettings.hpp"
 
 namespace ale {
 using namespace stella;   // System, Event, Deserializer, Serializer, Random

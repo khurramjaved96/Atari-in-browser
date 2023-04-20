@@ -28,7 +28,7 @@
 #ifndef __DOUBLEDUNK_HPP__
 #define __DOUBLEDUNK_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

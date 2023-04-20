@@ -23,9 +23,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Entombed.hpp"
+#include "Entombed.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

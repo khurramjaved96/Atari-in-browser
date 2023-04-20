@@ -28,7 +28,7 @@
 #ifndef __GRAVITAR_HPP__
 #define __GRAVITAR_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

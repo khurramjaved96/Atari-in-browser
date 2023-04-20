@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Defender.hpp"
+#include "Defender.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

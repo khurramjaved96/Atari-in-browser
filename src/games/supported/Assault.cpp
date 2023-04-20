@@ -25,9 +25,9 @@
  * *****************************************************************************
  */
 
-#include "games/supported/Assault.hpp"
+#include "Assault.hpp"
 
-#include "games/RomUtils.hpp"
+#include "../RomUtils.hpp"
 
 namespace ale {
 using namespace stella;

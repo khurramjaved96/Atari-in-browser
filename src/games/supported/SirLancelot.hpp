@@ -13,7 +13,7 @@
 #ifndef __SIRLANCELOT_HPP__
 #define __SIRLANCELOT_HPP__
 
-#include "games/RomSettings.hpp"
+#include "../RomSettings.hpp"
 
 namespace ale {
 

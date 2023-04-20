@@ -20,11 +20,11 @@
 #include <cstring>
 #include <cassert>
 
-#include "emucore/M6502Hi.hxx"
-#include "emucore/System.hxx"
-#include "emucore/Serializer.hxx"
-#include "emucore/Deserializer.hxx"
-#include "emucore/CartAR.hxx"
+#include "M6502Hi.hxx"
+#include "System.hxx"
+#include "Serializer.hxx"
+#include "Deserializer.hxx"
+#include "CartAR.hxx"
 
 namespace ale {
 namespace stella {
