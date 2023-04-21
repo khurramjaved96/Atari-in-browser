@@ -12,7 +12,8 @@
  *
  * You should have received a copy of the GNU General Public License
  * along with this program; if not, write to the Free Software
- * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301, USA.
+ * Foundation, Inc., 51 Franklin Street, Fifth Floor, Boston, MA 02110-1301,
+ *USA.
  * *****************************************************************************
  * A.L.E (Arcade Learning Environment)
  * Copyright (c) 2009-2013 by Yavar Naddaf, Joel Veness, Marc G. Bellemare and
@@ -36,19 +37,19 @@
 #include <cstddef>
 #include <cstdio>
 #include <cstdlib>
+#include <filesystem>
+#include <fstream>
 #include <iostream>
 #include <iterator>
 #include <sstream>
 #include <stdexcept>
 #include <vector>
-#include <filesystem>
-#include <fstream>
 
 #include "common/ColourPalette.hpp"
 #include "common/Constants.h"
 #include "emucore/Console.hxx"
-#include "emucore/Props.hxx"
 #include "emucore/MD5.hxx"
+#include "emucore/Props.hxx"
 #include "environment/ale_screen.hpp"
 #include "games/RomSettings.hpp"
 
@@ -66,14 +67,14 @@ std::string ALEInterface::welcomeMessage() {
   return oss.str();
 }
 
-void ALEInterface::createOSystem(std::unique_ptr<OSystem>& theOSystem,
-                                 std::unique_ptr<Settings>& theSettings) {
+void ALEInterface::createOSystem(std::unique_ptr<OSystem> &theOSystem,
+                                 std::unique_ptr<Settings> &theSettings) {
   theOSystem = std::make_unique<OSystem>();
   theSettings = std::make_unique<Settings>(theOSystem.get());
 }
 
-void ALEInterface::loadSettings(const fs::path& romfile,
-                                std::unique_ptr<OSystem>& theOSystem) {
+void ALEInterface::loadSettings(const fs::path &romfile,
+                                std::unique_ptr<OSystem> &theOSystem) {
   theOSystem->settings().validate();
   theOSystem->create();
 
@@ -126,21 +127,21 @@ void ALEInterface::loadROM(fs::path rom_file) {
   const std::string md5 = properties.get(Cartridge_MD5);
   const std::string name = properties.get(Cartridge_Name);
 
-  RomSettings* wrapper = buildRomRLWrapper(rom_file, md5);
+  RomSettings *wrapper = buildRomRLWrapper(rom_file, md5);
   if (wrapper == NULL) {
     Logger::Error << std::endl
-      << "Attempt to wrap ROM " << rom_file
-      << "(" << md5 << ") failed." << std::endl;
+                  << "Attempt to wrap ROM " << rom_file << "(" << md5
+                  << ") failed." << std::endl;
+
+    Logger::Error << "If you're using an MD5 mismatched ROM, please make sure "
+                  << "the filename is in snake case." << std::endl
+                  << "e.g., space_invaders.bin" << std::endl
+                  << std::endl;
 
     Logger::Error
-      << "If you're using an MD5 mismatched ROM, please make sure "
-      << "the filename is in snake case." << std::endl
-      << "e.g., space_invaders.bin" << std::endl << std::endl;
-
-    Logger::Error
-      << "For a list of supported ROMs see "
-      << "https://github.com/mgbellemare/Arcade-Learning-Environment"
-      << std::endl;
+        << "For a list of supported ROMs see "
+        << "https://github.com/mgbellemare/Arcade-Learning-Environment"
+        << std::endl;
 
     std::exit(1);
   } else if (wrapper->md5() != md5) {
@@ -165,7 +166,8 @@ void ALEInterface::loadROM(fs::path rom_file) {
   environment->reset();
 }
 
-std::optional<std::string> ALEInterface::isSupportedROM(const fs::path& rom_file){
+std::optional<std::string>
+ALEInterface::isSupportedROM(const fs::path &rom_file) {
   if (!fs::exists(rom_file)) {
     throw std::runtime_error("ROM file doesn't exist");
   }
@@ -176,11 +178,11 @@ std::optional<std::string> ALEInterface::isSupportedROM(const fs::path& rom_file
   }
 
   std::vector<uint8_t> rom((std::istreambuf_iterator<char>(fsnode)),
-                            std::istreambuf_iterator<char>());
+                           std::istreambuf_iterator<char>());
   fsnode.close();
 
   std::string md5 = MD5(rom.data(), rom.size());
-  RomSettings* wrapper = buildRomRLWrapper(rom_file, md5);
+  RomSettings *wrapper = buildRomRLWrapper(rom_file, md5);
 
   if (wrapper != NULL && wrapper->md5() == md5) {
     return wrapper->rom();
@@ -189,46 +191,47 @@ std::optional<std::string> ALEInterface::isSupportedROM(const fs::path& rom_file
 }
 
 // Get the value of a setting.
-const std::string& ALEInterface::getStringInplace(const std::string& key) const {
+const std::string &
+ALEInterface::getStringInplace(const std::string &key) const {
   assert(theSettings.get());
   return theSettings->getString(key);
 }
-std::string ALEInterface::getString(const std::string& key) const {
+std::string ALEInterface::getString(const std::string &key) const {
   return getStringInplace(key);
 }
-int ALEInterface::getInt(const std::string& key) const {
+int ALEInterface::getInt(const std::string &key) const {
   assert(theSettings.get());
   return theSettings->getInt(key);
 }
-bool ALEInterface::getBool(const std::string& key) const {
+bool ALEInterface::getBool(const std::string &key) const {
   assert(theSettings.get());
   return theSettings->getBool(key);
 }
-float ALEInterface::getFloat(const std::string& key) const {
+float ALEInterface::getFloat(const std::string &key) const {
   assert(theSettings.get());
   return theSettings->getFloat(key);
 }
 
 // Set the value of a setting.
-void ALEInterface::setString(const std::string& key, const std::string& value) {
+void ALEInterface::setString(const std::string &key, const std::string &value) {
   assert(theSettings.get());
   assert(theOSystem.get());
   theSettings->setString(key, value);
   theSettings->validate();
 }
-void ALEInterface::setInt(const std::string& key, const int value) {
+void ALEInterface::setInt(const std::string &key, const int value) {
   assert(theSettings.get());
   assert(theOSystem.get());
   theSettings->setInt(key, value);
   theSettings->validate();
 }
-void ALEInterface::setBool(const std::string& key, const bool value) {
+void ALEInterface::setBool(const std::string &key, const bool value) {
   assert(theSettings.get());
   assert(theOSystem.get());
   theSettings->setBool(key, value);
   theSettings->validate();
 }
-void ALEInterface::setFloat(const std::string& key, const float value) {
+void ALEInterface::setFloat(const std::string &key, const float value) {
   assert(theSettings.get());
   assert(theOSystem.get());
   theSettings->setFloat(key, value);
@@ -240,11 +243,14 @@ void ALEInterface::reset_game() { environment->reset(); }
 
 // Indicates if the game has ended.
 bool ALEInterface::game_over(bool with_truncation) const {
-  return with_truncation ? environment->isTerminal() : environment->isGameTerminal();
+  return with_truncation ? environment->isTerminal()
+                         : environment->isGameTerminal();
 }
 
 // Indicateds if the episode has been truncated.
-bool ALEInterface::game_truncated() const { return environment->isGameTruncated(); }
+bool ALEInterface::game_truncated() const {
+  return environment->isGameTruncated();
+}
 
 // The remaining number of lives.
 int ALEInterface::lives() {
@@ -273,7 +279,7 @@ ModeVect ALEInterface::getAvailableModes() const {
 // The mode must be an available mode.
 // This should be called only after the rom is loaded.
 void ALEInterface::setMode(game_mode_t m) {
-  //We first need to make sure m is an available mode
+  // We first need to make sure m is an available mode
   ModeVect available = romSettings->getAvailableModes();
   if (find(available.begin(), available.end(), m) != available.end()) {
     environment->setMode(m);
@@ -282,8 +288,8 @@ void ALEInterface::setMode(game_mode_t m) {
   }
 }
 
-//Returns the vector of difficulties available for the current game.
-//This should be called only after the rom is loaded.
+// Returns the vector of difficulties available for the current game.
+// This should be called only after the rom is loaded.
 DifficultyVect ALEInterface::getAvailableDifficulties() const {
   return romSettings->getAvailableDifficulties();
 }
@@ -321,7 +327,9 @@ ActionVect ALEInterface::getMinimalActionSet() const {
 }
 
 // Returns the frame number since the loading of the ROM
-int ALEInterface::getFrameNumber() const { return environment->getFrameNumber(); }
+int ALEInterface::getFrameNumber() const {
+  return environment->getFrameNumber();
+}
 
 // Returns the frame number since the start of the current episode
 int ALEInterface::getEpisodeFrameNumber() const {
@@ -329,42 +337,45 @@ int ALEInterface::getEpisodeFrameNumber() const {
 }
 
 // Returns the current game screen
-const ALEScreen& ALEInterface::getScreen() const { return environment->getScreen(); }
+const ALEScreen &ALEInterface::getScreen() const {
+  return environment->getScreen();
+}
 
-//This method should receive an empty vector to fill it with
-//the grayscale colours
+// This method should receive an empty vector to fill it with
+// the grayscale colours
 void ALEInterface::getScreenGrayscale(
-    std::vector<unsigned char>& grayscale_output_buffer) const {
+    std::vector<unsigned char> &grayscale_output_buffer) const {
   size_t w = environment->getScreen().width();
   size_t h = environment->getScreen().height();
   size_t screen_size = w * h;
 
-  pixel_t* ale_screen_data = environment->getScreen().getArray();
+  pixel_t *ale_screen_data = environment->getScreen().getArray();
   theOSystem->colourPalette().applyPaletteGrayscale(
       grayscale_output_buffer, ale_screen_data, screen_size);
 }
 
-//This method should receive a vector to fill it with
-//the RGB colours. The first positions contain the red colours,
-//followed by the green colours and then the blue colours
-void ALEInterface::getScreenRGB(std::vector<unsigned char>& output_rgb_buffer) const {
+// This method should receive a vector to fill it with
+// the RGB colours. The first positions contain the red colours,
+// followed by the green colours and then the blue colours
+void ALEInterface::getScreenRGB(
+    std::vector<unsigned char> &output_rgb_buffer) const {
   size_t w = environment->getScreen().width();
   size_t h = environment->getScreen().height();
   size_t screen_size = w * h;
 
-  pixel_t* ale_screen_data = environment->getScreen().getArray();
+  pixel_t *ale_screen_data = environment->getScreen().getArray();
 
   theOSystem->colourPalette().applyPaletteRGB(output_rgb_buffer,
                                               ale_screen_data, screen_size);
 }
 
 // Returns the current RAM content
-const ALERAM& ALEInterface::getRAM() const { return environment->getRAM(); }
+const ALERAM &ALEInterface::getRAM() const { return environment->getRAM(); }
 
 // Set byte at memory address
 void ALEInterface::setRAM(size_t memory_index, byte_t value) {
-  if (memory_index < 0 || memory_index >= 128){
-      throw std::runtime_error("setRAM index out of bounds.");
+  if (memory_index < 0 || memory_index >= 128) {
+    throw std::runtime_error("setRAM index out of bounds.");
   }
   return environment->setRAM(memory_index, value);
 }
@@ -373,26 +384,14 @@ ALEState ALEInterface::cloneState(bool include_rng) {
   return environment->cloneState(include_rng);
 }
 
-void ALEInterface::restoreState(const ALEState& state) {
+void ALEInterface::restoreState(const ALEState &state) {
   return environment->restoreState(state);
 }
 
-ALEState ALEInterface::cloneSystemState() {
-  return cloneState(true);
-}
+ALEState ALEInterface::cloneSystemState() { return cloneState(true); }
 
-void ALEInterface::restoreSystemState(const ALEState& state) {
+void ALEInterface::restoreSystemState(const ALEState &state) {
   return restoreState(state);
 }
 
-//void ALEInterface::saveScreenPNG(const std::string& filename) {
-//  ScreenExporter exporter(theOSystem->colourPalette());
-//  exporter.save(environment->getScreen(), filename);
-//}
-//
-//ScreenExporter*
-//ALEInterface::createScreenExporter(const std::string& filename) const {
-//  return new ScreenExporter(theOSystem->colourPalette(), filename);
-//}
-
-}  // namespace ale
+} // namespace ale
