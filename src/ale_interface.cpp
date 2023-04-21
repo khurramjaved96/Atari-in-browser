@@ -385,14 +385,14 @@ void ALEInterface::restoreSystemState(const ALEState& state) {
   return restoreState(state);
 }
 
-void ALEInterface::saveScreenPNG(const std::string& filename) {
-  ScreenExporter exporter(theOSystem->colourPalette());
-  exporter.save(environment->getScreen(), filename);
-}
-
-ScreenExporter*
-ALEInterface::createScreenExporter(const std::string& filename) const {
-  return new ScreenExporter(theOSystem->colourPalette(), filename);
-}
+//void ALEInterface::saveScreenPNG(const std::string& filename) {
+//  ScreenExporter exporter(theOSystem->colourPalette());
+//  exporter.save(environment->getScreen(), filename);
+//}
+//
+//ScreenExporter*
+//ALEInterface::createScreenExporter(const std::string& filename) const {
+//  return new ScreenExporter(theOSystem->colourPalette(), filename);
+//}
 
 }  // namespace ale

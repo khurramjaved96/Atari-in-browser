@@ -89,8 +89,8 @@ StellaEnvironment::StellaEnvironment(OSystem* osystem, RomSettings* settings)
     Logger::Info << "Recording screens to directory: " << recordDir << "\n";
 
     // Create the screen exporter
-    m_screen_exporter.reset(
-        new ScreenExporter(m_osystem->colourPalette(), recordDir));
+//    m_screen_exporter.reset(
+//        new ScreenExporter(m_osystem->colourPalette(), recordDir));
   }
 }
 
@@ -177,8 +177,8 @@ reward_t StellaEnvironment::act(Action player_a_action,
     m_osystem->screen().render();
 
     // Similarly record screen as needed
-    if (m_screen_exporter.get() != NULL)
-      m_screen_exporter->saveNext(m_screen);
+//    if (m_screen_exporter.get() != NULL)
+//      m_screen_exporter->saveNext(m_screen);
 
     // Use the stored actions, which may or may not have changed this frame
     sum_rewards += oneStepAct(m_player_a_action, m_player_b_action);
