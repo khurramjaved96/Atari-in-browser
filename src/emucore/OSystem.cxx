@@ -22,7 +22,7 @@
 #include <fstream>
 #include <iostream>
 #include <string>
-#include <zlib.h>
+#include <stdio.h>
 
 #include "MD5.hxx"
 #include "Settings.hxx"
@@ -217,19 +217,28 @@ void OSystem::deleteConsole()
 }
 
 // - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-bool OSystem::openROM(const fs::path& rom, std::string& md5, uint8_t** image, int* size)
-{
-  // Assume the file is either gzip'ed or not compressed at all
-  gzFile f = gzopen(rom.string().c_str(), "rb");
-  if(!f)
-    return false;
+bool OSystem::openROM(const fs::path &rom, std::string &md5, uint8_t **image,
+                      int *size) {
 
   *image = new uint8_t[MAX_ROM_SIZE];
-  *size = gzread(f, *image, MAX_ROM_SIZE);
-  gzclose(f);
+  uint8_t * test = *image;
+  std::ifstream myFile(rom.string().c_str(), std::ios::in | std::ios::binary);
+  if (myFile) {
+    myFile.seekg (0, myFile.end);
+    *size = myFile.tellg();
+    myFile.seekg (0, myFile.beg);
+  } else {
+    std::cout << "Can't read file\n";
+    perror(rom.string().c_str());
+    return false;
+  }
+  char* image_char;
+  image_char = new char[*size];
+  myFile.read(image_char, *size);
+  for(int i = 0; i <*size; i++){
+    test[i] = uint8_t(image_char[i]);
+  }
 
-  // If we get to this point, we know we have a valid file to open
-  // Now we make sure that the file has a valid properties entry
   md5 = MD5(*image, *size);
 
   // Some games may not have a name, since there may not
@@ -239,8 +248,7 @@ bool OSystem::openROM(const fs::path& rom, std::string& md5, uint8_t** image, in
   myPropSet->getMD5(md5, props);
 
   std::string name = props.get(Cartridge_Name);
-  if(name == "Untitled")
-  {
+  if (name == "Untitled") {
     // Use the filename stem if we don't have this ROM in DefProps.
     // Stem is just the filename excluding the extension.
     // ROM is a valid file so we don't have to do extensive checks here
