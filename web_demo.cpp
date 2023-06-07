@@ -5,7 +5,6 @@
 #include <emscripten.h>
 #endif
 
-
 #define GLFW_INCLUDE_ES3
 #include "GLFW/glfw3.h"
 #include <GLES3/gl3.h>
@@ -14,16 +13,13 @@
 #include "imgui_impl_glfw.h"
 #include "imgui_impl_opengl3.h"
 
-
-
 using namespace std;
 
 ale::ALEInterface my_env;
 
-
-
-
-
+std::vector<std::string> my_models;
+static int model_load_idx = 0;
+std::vector<unsigned char> features;
 GLFWwindow *g_window;
 ImVec4 clear_color =
     ImVec4(86.0f / 255.0f, 157.0f / 255.0f, 170.0f / 255.0f, 1.00f);
@@ -47,14 +43,13 @@ void on_size_changed() {
   ImGui::SetCurrentContext(ImGui::GetCurrentContext());
 }
 
-
 long long int steps = 0;
 
-void loop() {
+void agent_step() {
   // Get the vector of legal actions
   ale::ActionVect legal_actions = my_env.getLegalActionSet();
 
-  if(my_env.game_over()) {
+  if (my_env.game_over()) {
     my_env.reset_game();
     cout << "Episode ended\n";
   }
@@ -75,6 +70,47 @@ void loop() {
   ImGui_ImplOpenGL3_NewFrame();
   ImGui_ImplGlfw_NewFrame();
   ImGui::NewFrame();
+  GLuint textureID;
+  glGenTextures(1, &textureID);
+
+  // "Bind" the newly created texture : all future texture functions will modify
+  // this texture
+  glBindTexture(GL_TEXTURE_2D, textureID);
+
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MIN_FILTER, GL_LINEAR);
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_MAG_FILTER, GL_LINEAR);
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_S,
+                  GL_CLAMP_TO_EDGE); // This is required on WebGL for non
+                                     // power-of-two textures
+  glTexParameteri(GL_TEXTURE_2D, GL_TEXTURE_WRAP_T, GL_CLAMP_TO_EDGE); // Same
+
+  my_env.getScreenRGB(features);
+  unsigned char *data;
+  data = reinterpret_cast<unsigned char *>(features.data());
+  glTexImage2D(GL_TEXTURE_2D, 0, GL_RGB, GLsizei(my_env.getWidth()),
+               GLsizei(my_env.getHeight()), 0, GL_RGB, GL_UNSIGNED_BYTE, data);
+
+  ImGui::Begin("Game view");
+  ImGui::Image((void *)textureID,
+               ImVec2(my_env.getWidth()*2, my_env.getHeight()*2));
+  //  ImGui::End();
+
+  //  ImGui::Begin("Games");
+  if (ImGui::BeginListBox("Game list")) {
+    for (int n = 0; n < my_models.size(); n++) {
+      const bool is_selected = (model_load_idx == n);
+      if (ImGui::Selectable(my_models[n].c_str(), is_selected))
+        model_load_idx = n;
+
+      if (is_selected)
+        ImGui::SetItemDefaultFocus();
+    }
+    ImGui::EndListBox();
+  }
+  if (ImGui::Button("Load model")) {
+    my_env.loadROM(my_models[model_load_idx]);
+  }
+  ImGui::End();
 
   ImGui::Render();
 
@@ -87,28 +123,24 @@ void loop() {
 
   ImGui_ImplOpenGL3_RenderDrawData(ImGui::GetDrawData());
   glfwMakeContextCurrent(g_window);
-
 }
 
-
-
-int init_gl()
-{
-  if( !glfwInit() )
-  {
-    fprintf( stderr, "Failed to initialize GLFW\n" );
+int init_gl() {
+  if (!glfwInit()) {
+    fprintf(stderr, "Failed to initialize GLFW\n");
     return 1;
   }
 
-  glfwWindowHint(GLFW_OPENGL_PROFILE, GLFW_OPENGL_CORE_PROFILE); // We don't want the old OpenGL
+  glfwWindowHint(GLFW_OPENGL_PROFILE,
+                 GLFW_OPENGL_CORE_PROFILE); // We don't want the old OpenGL
 
   // Open a window and create its OpenGL context
   int canvasWidth = g_width;
   int canvasHeight = g_height;
-  g_window = glfwCreateWindow(canvasWidth, canvasHeight, "WebGui Demo", NULL, NULL);
-  if( g_window == NULL )
-  {
-    fprintf( stderr, "Failed to open GLFW window.\n" );
+  g_window =
+      glfwCreateWindow(canvasWidth, canvasHeight, "WebGui Demo", NULL, NULL);
+  if (g_window == NULL) {
+    fprintf(stderr, "Failed to open GLFW window.\n");
     glfwTerminate();
     return -1;
   }
@@ -117,10 +149,7 @@ int init_gl()
   return 0;
 }
 
-
-
-int init_imgui()
-{
+int init_imgui() {
   // Setup Dear ImGui binding
   IMGUI_CHECKVERSION();
   ImGui::CreateContext();
@@ -130,7 +159,7 @@ int init_imgui()
   // Setup style
   ImGui::StyleColorsDark();
 
-  ImGuiIO& io = ImGui::GetIO();
+  ImGuiIO &io = ImGui::GetIO();
 
   // Load Fonts
   io.Fonts->AddFontFromFileTTF("data/xkcd-script.ttf", 23.0f);
@@ -144,38 +173,43 @@ int init_imgui()
   return 0;
 }
 
-
-int init()
-{
+int init() {
   init_gl();
   init_imgui();
+  for (const auto &entry : fs::directory_iterator("/data/")) {
+    auto s = entry.path().string();
+    std::cout << "Directory data " << s << std::endl;
+    if (s.find(".bin") != std::string::npos) {
+      std::string model_name = "";
+      for (int i = 0; i < s.size(); i++) {
+        model_name += s[i];
+      }
+      std::cout << "Game namee = " << model_name << std::endl;
+      my_models.push_back(model_name);
+    }
+  }
+
   return 0;
 }
 
-
-void quit()
-{
-  glfwTerminate();
-}
-
-
-
+void quit() { glfwTerminate(); }
 
 extern "C" int main(int argc, char **argv) {
 
   g_width = canvas_get_width();
   g_height = canvas_get_height();
-  if (init() != 0) return 1;
+  if (init() != 0)
+    return 1;
 
   // Get & Set the desired settings
   my_env.setInt("random_seed", 123);
   // The default is already 0.25, this is just an example
   my_env.setFloat("repeat_action_probability", 0.25);
 
-
   // Load the ROM file. (Also resets the system for new settings to
   // take effect.)
-  std::cout << "Loading rom from /data/breakout.bin" << std::endl;;
+  std::cout << "Loading rom from /data/breakout.bin" << std::endl;
+  ;
   my_env.loadROM("/data/breakout.bin");
   std::cout << "Rom loaded\n";
 #ifdef __EMSCRIPTEN__
@@ -185,9 +219,8 @@ extern "C" int main(int argc, char **argv) {
   return 0;
 }
 
-
 //
-//int main(int argc, char **argv) {
+// int main(int argc, char **argv) {
 //  if (argc < 2) {
 //    std::cerr << "Usage: " << argv[0] << " rom_file" << std::endl;
 //    return 1;
@@ -219,8 +252,9 @@ extern "C" int main(int argc, char **argv) {
 //
 //      ale.getScreenGrayscale(display);
 //
-////      std::cout << "Width = "<< ale.environment->getScreen().width()  << " Height = " << ale.environment->getScreen().height() << std::endl;
-////      std::cout << "Features size = " << display.size() << std::endl;
+////      std::cout << "Width = "<< ale.environment->getScreen().width()  << "
+///Height = " << ale.environment->getScreen().height() << std::endl; / std::cout
+///<< "Features size = " << display.size() << std::endl;
 //      // Apply the action and get the resulting reward
 //      float reward = ale.act(a);
 //      totalReward += reward;
