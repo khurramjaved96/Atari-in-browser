@@ -354,6 +354,13 @@ void ALEInterface::getScreenGrayscale(
       grayscale_output_buffer, ale_screen_data, screen_size);
 }
 
+size_t ALEInterface::getWidth() {
+  return size_t(environment->getScreen().width());
+}
+
+size_t ALEInterface::getHeight() {
+  return size_t(environment->getScreen().height());
+}
 // This method should receive a vector to fill it with
 // the RGB colours. The first positions contain the red colours,
 // followed by the green colours and then the blue colours

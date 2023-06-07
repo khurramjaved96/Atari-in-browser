@@ -64,7 +64,8 @@ public:
   int getInt(const std::string &key) const;
   bool getBool(const std::string &key) const;
   float getFloat(const std::string &key) const;
-
+  size_t getWidth();
+  size_t getHeight();
   // getStringInplace is a version of getString that returns a reference to the
   // actual, stored settings string object, without making a copy. The reference
   // is only valid until the next call of any of the setter functions below, so
